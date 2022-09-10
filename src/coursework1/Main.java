@@ -26,6 +26,7 @@ public class Main {
 
         Arrays.stream(employees).forEach(System.out::println);
 
+
         printAllEmployees();
         monthlyAmount();
         employeeMaxSalary();
