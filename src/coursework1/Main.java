@@ -24,8 +24,6 @@ public class Main {
         employees[5] = empl6;
         employees[6] = empl7;
 
-        Employee[] empl = Arrays.copyOf(employees, employees.length + 1);
-
         Arrays.stream(employees).forEach(System.out::println);
 
         printAllEmployees();
