@@ -52,6 +52,27 @@ public class Main {
         employeeLessSalary(250000);
         employeeMoreSalary(250000);
 
+        System.out.println();
+        book1.printAllEmployees();
+        book1.monthlyAmount();
+        book1.employeeMaxSalary();
+        book1.employeeMinSalary();
+        book1.averageSalary();
+        book1.printFullNameEmployees();
+        book1.indexationSalary(5);
+        book1.minSalaryInDepartment(1);
+        book1.maxSalaryInDepartment(1);
+        book1.departmentalPayrollCosts(4);
+        book1.averageSalaryInDepartment(1);
+        book1.indexationSalaryInDepartment(5,1);
+        book1.printAllEmployeesInDepartment(1);
+        book1.employeeLessSalary(13500);
+        book1.employeeMoreSalary(13500);
+        book1.deleteEmployee(3);
+        book1.changesEmployee("Абдрахимов","Артур","Ренатович",1,14200);
+        book1.printOfDepartments(1);
+
+
     }
 
     private static void printAllEmployees() {
@@ -96,14 +117,14 @@ public class Main {
 
     private static void averageSalary() {
         int peopleCount = 0;
-        int sum = 0;
+        double sum = 0;
         for (Employee employee : employees) {
             if (employee != null) {
                 sum += employee.getSalary();
                 peopleCount++;
             }
         }
-        float salaryAverage = sum / peopleCount;
+        double salaryAverage = sum / peopleCount;
         System.out.println("Средняя зарплата сотрудников: " + salaryAverage + " рублей.");
     }
 
@@ -185,14 +206,14 @@ public class Main {
 
     private static void averageSalaryInDepartment(int department) {
         int peopleCount = 0;
-        int sum = 0;
+        double sum = 0;
         for (Employee employee : employees) {
             if (employee != null && employee.getDepartment() == department) {
                 sum += employee.getSalary();
                 peopleCount++;
             }
         }
-        float salaryAverage = sum / peopleCount;
+        double salaryAverage = sum / peopleCount;
         System.out.println("Средняя зарплата сотрудников отдела № " + department + " составляет: "
                 + salaryAverage + " рублей.");
     }
